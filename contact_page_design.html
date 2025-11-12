@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - EventHub</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        purple: {
+                            50: '#faf5ff',
+                            100: '#f3e8ff',
+                            500: '#a855f7',
+                            600: '#9333ea',
+                            700: '#7c3aed',
+                            800: '#6b21a8',
+                            900: '#581c87',
+                        }
+                    },
+                    fontFamily: {
+                        'poppins': ['Poppins', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        * {
+            font-family: 'Poppins', sans-serif;
+        }
+        
+        .contact-card {
+            transition: all 0.3s ease;
+        }
+        
+        .contact-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
+        
+        .faq-item {
+            transition: all 0.3s ease;
+        }
+        
+        .faq-item:hover {
+            transform: translateX(5px);
+        }
+        
+        .input-focus:focus {
+            box-shadow: 0 0 0 3px rgba(168, 85, 247, 0.1);
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <div class="flex-shrink-0 flex items-center">
+                        <i class="fas fa-calendar-alt text-purple-600 text-2xl mr-2"></i>
+                        <span class="font-bold text-xl text-gray-800">EventHub</span>
+                    </div>
+                    <div class="hidden md:ml-6 md:flex md:space-x-8">
+                        <a href="#" class="text-gray-500 hover:text-purple-600 px-3 py-2 text-sm font-medium transition duration-300">Home</a>
+                        <a href="#" class="text-gray-500 hover:text-purple-600 px-3 py-2 text-sm font-medium transition duration-300">Events</a>
+                        <a href="#" class="text-gray-500 hover:text-purple-600 px-3 py-2 text-sm font-medium transition duration-300">Services</a>
+                        <a href="#" class="text-purple-600 border-b-2 border-purple-600 px-3 py-2 text-sm font-medium">Contact</a>
+                    </div>
+                </div>
+                <div class="flex items-center">
+                    <a href="#" class="bg-purple-600 hover:bg-purple-700 text-white px-4 py-2 rounded-md text-sm font-medium transition duration-300 transform hover:scale-105">Get Started</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="bg-gradient-to-r from-purple-600 to-blue-600 text-white py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h1 class="text-4xl md:text-6xl font-bold mb-6">Get In Touch</h1>
+            <p class="text-xl max-w-3xl mx-auto mb-10">We're here to help you create amazing events. Reach out to us with any questions or concerns.</p>
+            <div class="flex justify-center space-x-4">
+                <a href="#contact-form" class="bg-white text-purple-600 hover:bg-gray-100 px-6 py-3 rounded-lg font-medium transition duration-300 transform hover:scale-105">Send Message</a>
+                <a href="#contact-info" class="bg-transparent border-2 border-white hover:bg-white hover:text-purple-600 px-6 py-3 rounded-lg font-medium transition duration-300 transform hover:scale-105">Contact Info</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <!-- Contact Information -->
+                <div class="space-y-8">
+                    <div>
+                        <h2 class="text-3xl font-bold text-gray-800 mb-4">Let's Start a Conversation</h2>
+                        <p class="text-gray-600 text-lg">We're passionate about helping you create unforgettable events. Whether you're an organizer or participant, we're here to support you.</p>
+                    </div>
+
+                    <!-- Contact Methods -->
+                    <div class="space-y-6">
+                        <div class="contact-card bg-white rounded-xl p-6 shadow-md border border-gray-100">
+                            <div class="flex items-start space-x-4">
+                                <div class="flex-shrink-0">
+                                    <div class="w-12 h-12 bg-purple-100 text-purple-600 rounded-lg flex items-center justify-center">
+                                        <i class="fas fa-map-marker-alt text-xl"></i>
+                                    </div>
+                                </div>
+                                <div>
+                                    <h3 class="text-lg font-semibold text-gray-800 mb-1">Visit Our Office</h3>
+                                    <p class="text-gray-600">123 Event Street<br>Digital City, DC 12345</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="contact-card bg-white rounded-xl p-6 shadow-md border border-gray-100">
+                            <div class="flex items-start space-x-4">
+                                <div class="flex-shrink-0">
+                                    <div class="w-12 h-12 bg-blue-100 text-blue-600 rounded-lg flex items-center justify-center">
+                                        <i class="fas fa-phone text-xl"></i>
+                                    </div>
+                                </div>
+                                <div>
+                                    <h3 class="text-lg font-semibold text-gray-800 mb-1">Call Us</h3>
+                                    <p class="text-gray-600">+1 (555) 123-4567<br>Mon-Fri 9:00 AM - 6:00 PM</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="contact-card bg-white rounded-xl p-6 shadow-md border border-gray-100">
+                            <div class="flex items-start space-x-4">
+                                <div class="flex-shrink-0">
+                                    <div class="w-12 h-12 bg-green-100 text-green-600 rounded-lg flex items-center justify-center">
+                                        <i class="fas fa-envelope text-xl"></i>
+                                    </div>
+                                </div>
+                                <div>
+                                    <h3 class="text-lg font-semibold text-gray-800 mb-1">Email Us</h3>
+                                    <p class="text-gray-600">support@eventhub.com<br>help@eventhub.com</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Support Hours -->
+                    <div class="bg-white rounded-xl p-6 shadow-md border border-gray-100">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-4">Support Hours</h3>
+                        <div class="space-y-3 text-gray-600">
+                            <div class="flex justify-between items-center py-2 border-b border-gray-100">
+                                <span class="font-medium">Monday - Friday</span>
+                                <span class="bg-purple-100 text-purple-600 px-3 py-1 rounded-full text-sm font-medium">9:00 AM - 6:00 PM</span>
+                            </div>
+                            <div class="flex justify-between items-center py-2 border-b border-gray-100">
+                                <span class="font-medium">Saturday</span>
+                                <span class="bg-blue-100 text-blue-600 px-3 py-1 rounded-full text-sm font-medium">10:00 AM - 4:00 PM</span>
+                            </div>
+                            <div class="flex justify-between items-center py-2">
+                                <span class="font-medium">Sunday</span>
+                                <span class="bg-green-100 text-green-600 px-3 py-1 rounded-full text-sm font-medium">Emergency Support</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Social Links -->
+                    <div class="bg-white rounded-xl p-6 shadow-md border border-gray-100">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-4">Follow Us</h3>
+                        <p class="text-gray-600 mb-4">Stay updated with our latest features and event announcements</p>
+                        <div class="flex space-x-4">
+                            <a href="#" class="w-12 h-12 bg-blue-600 text-white rounded-lg flex items-center justify-center hover:bg-blue-700 transition duration-300 transform hover:scale-110">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="#" class="w-12 h-12 bg-pink-600 text-white rounded-lg flex items-center justify-center hover:bg-pink-700 transition duration-300 transform hover:scale-110">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="#" class="w-12 h-12 bg-blue-400 text-white rounded-lg flex items-center justify-center hover:bg-blue-500 transition duration-300 transform hover:scale-110">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="#" class="w-12 h-12 bg-gray-800 text-white rounded-lg flex items-center justify-center hover:bg-gray-900 transition duration-300 transform hover:scale-110">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a href="#" class="w-12 h-12 bg-red-600 text-white rounded-lg flex items-center justify-center hover:bg-red-700 transition duration-300 transform hover:scale-110">
+                                <i class="fab fa-youtube"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <div id="contact-form" class="bg-white rounded-2xl shadow-xl p-8">
+                    <h2 class="text-2xl font-bold text-gray-800 mb-2">Send us a Message</h2>
+                    <p class="text-gray-600 mb-6">Fill out the form below and we'll get back to you within 24 hours.</p>
+                    
+                    <form class="space-y-6">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div>
+                                <label for="first-name" class="block text-sm font-medium text-gray-700 mb-2">First Name *</label>
+                                <input type="text" id="first-name" name="first-name" required 
+                                       class="input-focus w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-600 focus:border-transparent transition duration-300"
+                                       placeholder="John">
+                            </div>
+                            <div>
+                                <label for="last-name" class="block text-sm font-medium text-gray-700 mb-2">Last Name *</label>
+                                <input type="text" id="last-name" name="last-name" required
+                                       class="input-focus w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-600 focus:border-transparent transition duration-300"
+                                       placeholder="Doe">
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <label for="email" class="block text-sm font-medium text-gray-700 mb-2">Email Address *</label>
+                            <input type="email" id="email" name="email" required
+                                   class="input-focus w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-600 focus:border-transparent transition duration-300"
+                                   placeholder="john@example.com">
+                        </div>
+                        
+                        <div>
+                            <label for="phone" class="block text-sm font-medium text-gray-700 mb-2">Phone Number</label>
+                            <input type="tel" id="phone" name="phone"
+                                   class="input-focus w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-600 focus:border-transparent transition duration-300"
+                                   placeholder="+1 (555) 123-4567">
+                        </div>
+                        
+                        <div>
+                            <label for="subject" class="block text-sm font-medium text-gray-700 mb-2">Subject *</label>
+                            <select id="subject" name="subject" required
+                                    class="input-focus w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-600 focus:border-transparent transition duration-300">
+                                <option value="">Select a subject</option>
+                                <option value="general">General Inquiry</option>
+                                <option value="technical">Technical Support</option>
+                                <option value="billing">Billing Question</option>
+                                <option value="feature">Feature Request</option>
+                                <option value="partnership">Partnership</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        
+                        <div>
+                            <label for="message" class="block text-sm font-medium text-gray-700 mb-2">Message *</label>
+                            <textarea id="message" name="message" rows="6" required
+                                      class="input-focus w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-600 focus:border-transparent transition duration-300"
+                                      placeholder="Tell us how we can help you..."></textarea>
+                        </div>
+                        
+                        <div class="flex items-center">
+                            <input id="newsletter" name="newsletter" type="checkbox" 
+                                   class="h-4 w-4 text-purple-600 focus:ring-purple-500 border-gray-300 rounded">
+                            <label for="newsletter" class="ml-2 block text-sm text-gray-700">
+                                Subscribe to our newsletter for updates and event announcements
+                            </label>
+                        </div>
+                        
+                        <button type="submit" 
+                                class="w-full bg-purple-600 hover:bg-purple-700 text-white font-medium py-3 px-6 rounded-lg transition duration-300 transform hover:scale-105 flex items-center justify-center">
+                            <i class="fas fa-paper-plane mr-2"></i>
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-16 bg-gray-100">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">Frequently Asked Questions</h2>
+                <p class="text-gray-600">Quick answers to common questions about our event management system</p>
+            </div>
+
+            <div class="space-y-4">
+                <!-- FAQ Item 1 -->
+                <div class="faq-item bg-white rounded-xl p-6 shadow-sm border border-gray-200">
+                    <button class="flex justify-between items-center w-full text-left faq-question">
+                        <span class="text-lg font-semibold text-gray-800">How do I create an event as an organizer?</span>
+                        <i class="fas fa-chevron-down text-purple-600 transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-answer mt-4 text-gray-600 hidden">
+                        After registering as an organizer, you can create events from your dashboard. Click "Create Event" and fill in the required details including event name, description, date, time, category, and upload an image. Once submitted, your event will be live on the platform.
+                    </div>
+                </div>
+
+                <!-- FAQ Item 2 -->
+                <div class="faq-item bg-white rounded-xl p-6 shadow-sm border border-gray-200">
+                    <button class="flex justify-between items-center w-full text-left faq-question">
+                        <span class="text-lg font-semibold text-gray-800">Can I change my user role after registration?</span>
+                        <i class="fas fa-chevron-down text-purple-600 transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-answer mt-4 text-gray-600 hidden">
+                        User roles can only be changed by administrators. If you need to change your role from participant to organizer or vice versa, please contact our support team with your request. We'll review it and make the necessary changes.
+                    </div>
+                </div>
+
+                <!-- FAQ Item 3 -->
+                <div class="faq-item bg-white rounded-xl p-6 shadow-sm border border-gray-200">
+                    <button class="flex justify-between items-center w-full text-left faq-question">
+                        <span class="text-lg font-semibold text-gray-800">How does the RSVP system work?</span>
+                        <i class="fas fa-chevron-down text-purple-600 transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-answer mt-4 text-gray-600 hidden">
+                        Participants can RSVP to events with a single click. You'll receive an email confirmation immediately, and the event will appear in your personal dashboard. Our system prevents duplicate RSVPs, so each user can only register once per event.
+                    </div>
+                </div>
+
+                <!-- FAQ Item 4 -->
+                <div class="faq-item bg-white rounded-xl p-6 shadow-sm border border-gray-200">
+                    <button class="flex justify-between items-center w-full text-left faq-question">
+                        <span class="text-lg font-semibold text-gray-800">What should I do if I didn't receive my activation email?</span>
+                        <i class="fas fa-chevron-down text-purple-600 transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-answer mt-4 text-gray-600 hidden">
+                        First, check your spam folder. If you still can't find the activation email, you can request a new one from the login page by clicking "Resend Activation Email". If the problem persists, contact our support team for immediate assistance.
+                    </div>
+                </div>
+
+                <!-- FAQ Item 5 -->
+                <div class="faq-item bg-white rounded-xl p-6 shadow-sm border border-gray-200">
+                    <button class="flex justify-between items-center w-full text-left faq-question">
+                        <span class="text-lg font-semibold text-gray-800">How can I manage my RSVP'd events?</span>
+                        <i class="fas fa-chevron-down text-purple-600 transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-answer mt-4 text-gray-600 hidden">
+                        All your RSVP'd events are available in your Participant Dashboard. You can view upcoming events, see event details, and cancel your RSVP if needed. You'll also receive email reminders before each event.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <section class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">Find Us Here</h2>
+                <p class="text-gray-600">Visit our office or reach out through any of our contact methods</p>
+            </div>
+            
+            <!-- Map Container -->
+            <div class="bg-gray-200 rounded-2xl shadow-xl overflow-hidden h-96 relative">
+                <!-- Simple Map Representation -->
+                <div class="absolute inset-0 bg-gradient-to-br from-blue-400 to-purple-500 flex items-center justify-center">
+                    <div class="text-center text-white p-8">
+                        <i class="fas fa-map-marked-alt text-6xl mb-4"></i>
+                        <h3 class="text-2xl font-bold mb-2">EventHub Headquarters</h3>
+                        <p class="text-lg mb-2">123 Event Street, Digital City</p>
+                        <p class="text-lg">DC 12345, United States</p>
+                    </div>
+                </div>
+                
+                <!-- Map Marker -->
+                <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+                    <div class="relative">
+                        <div class="w-8 h-8 bg-red-600 rounded-full border-4 border-white shadow-lg animate-pulse"></div>
+                        <div class="absolute top-0 left-0 w-8 h-8 bg-red-600 rounded-full opacity-75 animate-ping"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-16 bg-purple-700 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-6">Ready to Get Started?</h2>
+            <p class="text-xl max-w-3xl mx-auto mb-10">Join thousands of event organizers and participants using our platform to create amazing experiences.</p>
+            <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
+                <a href="#" class="bg-white text-purple-600 hover:bg-gray-100 px-8 py-3 rounded-lg font-medium text-lg transition duration-300 transform hover:scale-105">Sign Up Free</a>
+                <a href="#" class="bg-transparent border-2 border-white hover:bg-white hover:text-purple-600 px-8 py-3 rounded-lg font-medium text-lg transition duration-300 transform hover:scale-105">Schedule Demo</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">EventHub</h3>
+                    <p class="text-gray-400">Advanced event management solutions for organizations of all sizes.</p>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">Quick Links</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#" class="hover:text-white transition duration-300">Home</a></li>
+                        <li><a href="#" class="hover:text-white transition duration-300">Events</a></li>
+                        <li><a href="#" class="hover:text-white transition duration-300">Services</a></li>
+                        <li><a href="#" class="hover:text-white transition duration-300">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">Services</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#" class="hover:text-white transition duration-300">Event Creation</a></li>
+                        <li><a href="#" class="hover:text-white transition duration-300">RSVP System</a></li>
+                        <li><a href="#" class="hover:text-white transition duration-300">User Management</a></li>
+                        <li><a href="#" class="hover:text-white transition duration-300">Email Notifications</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">Contact Info</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li class="flex items-center">
+                            <i class="fas fa-map-marker-alt mr-2 w-4"></i>
+                            <span>123 Event Street, Digital City</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-phone mr-2 w-4"></i>
+                            <span>+1 (555) 123-4567</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-envelope mr-2 w-4"></i>
+                            <span>support@eventhub.com</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2024 EventHub. All rights reserved. | Event Management System</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Success Notification -->
+    <div id="successNotification" class="fixed top-4 right-4 bg-green-500 text-white px-6 py-3 rounded-lg shadow-lg hidden z-50 transform transition-transform duration-300 translate-x-full">
+        <div class="flex items-center space-x-2">
+            <i class="fas fa-check-circle"></i>
+            <span>Message sent successfully! We'll get back to you soon.</span>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // FAQ Toggle functionality
+            const faqQuestions = document.querySelectorAll('.faq-question');
+            
+            faqQuestions.forEach(question => {
+                question.addEventListener('click', function() {
+                    const answer = this.parentElement.querySelector('.faq-answer');
+                    const icon = this.querySelector('i');
+                    
+                    // Toggle current FAQ
+                    answer.classList.toggle('hidden');
+                    icon.classList.toggle('rotate-180');
+                    
+                    // Close other FAQs
+                    faqQuestions.forEach(otherQuestion => {
+                        if (otherQuestion !== this) {
+                            const otherAnswer = otherQuestion.parentElement.querySelector('.faq-answer');
+                            const otherIcon = otherQuestion.querySelector('i');
+                            otherAnswer.classList.add('hidden');
+                            otherIcon.classList.remove('rotate-180');
+                        }
+                    });
+                });
+            });
+            
+            // Form submission handling
+            const contactForm = document.querySelector('form');
+            if (contactForm) {
+                contactForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    
+                    // Simple form validation
+                    const requiredFields = this.querySelectorAll('[required]');
+                    let isValid = true;
+                    
+                    requiredFields.forEach(field => {
+                        if (!field.value.trim()) {
+                            isValid = false;
+                            field.classList.add('border-red-500');
+                        } else {
+                            field.classList.remove('border-red-500');
+                        }
+                    });
+                    
+                    if (!isValid) {
+                        alert('Please fill in all required fields.');
+                        return;
+                    }
+                    
+                    // Simulate form submission
+                    const submitBtn = this.querySelector('button[type="submit"]');
+                    const originalText = submitBtn.innerHTML;
+                    
+                    submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin mr-2"></i> Sending...';
+                    submitBtn.disabled = true;
+                    
+                    // Simulate API call
+                    setTimeout(() => {
+                        // Show success notification
+                        const notification = document.getElementById('successNotification');
+                        notification.classList.remove('hidden', 'translate-x-full');
+                        
+                        setTimeout(() => {
+                            notification.classList.add('translate-x-full');
+                            setTimeout(() => {
+                                notification.classList.add('hidden');
+                            }, 300);
+                        }, 4000);
+                        
+                        // Reset form
+                        this.reset();
+                        submitBtn.innerHTML = originalText;
+                        submitBtn.disabled = false;
+                    }, 2000);
+                });
+            }
+            
+            // Add animation to contact cards on scroll
+            const contactCards = document.querySelectorAll('.contact-card, .faq-item');
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, { threshold: 0.1 });
+            
+            contactCards.forEach(card => {
+                card.style.opacity = '0';
+                card.style.transform = 'translateY(20px)';
+                card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+                observer.observe(card);
+            });
+        });
+    </script>
+</body>
+</html>
